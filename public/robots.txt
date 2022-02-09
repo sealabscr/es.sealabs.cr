@@ -1,4 +1,4 @@
-Sitemap: https://sealabs.cr/sitemap.xml
+Sitemap: https://es.sealabs.cr/sitemap.xml
 
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
