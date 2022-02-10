@@ -1,18 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+
 import Box from '@mui/material/Box'
-import useStyles from './styles'
+import BuildIcon from '@mui/icons-material/Build';
+import CodeIcon from '@mui/icons-material/Code';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Typography from '@mui/material/Typography';
 import { URL_IMAGES } from '../../constants'
 import Waves from '../../components/waves/inedx'
-
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-
-import IconButton from '@mui/material/IconButton';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import CodeIcon from '@mui/icons-material/Code';
-import BuildIcon from '@mui/icons-material/Build';
-import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import useStyles from './styles'
 
 const LandingPage = () => {
   const classes = useStyles()
@@ -104,7 +103,7 @@ const LandingPage = () => {
                 <Grid item xs={12} md={6}>
                   <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px'}}>Misión</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
-                    Nos apasionamos por el crecimiento local, por lo que a través de nuestros servicios Tecnologicos nuestros clientes puedan expandir y facilitar sus tareas de forma eficiente, segura y confiable. 
+                    Nos apasionamos por el crecimiento local, por lo que a través de nuestros servicios tecnológicos nuestros clientes puedan expandir y facilitar sus tareas de forma eficiente, segura y confiable. 
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -125,7 +124,7 @@ const LandingPage = () => {
       <Box className={classes.callToActionWrapper}>
           <Box className={classes.headerContentWrapper}>
             <Typography variant="h1" component="h1" gutterBottom style={{color: '#fff'}}>
-              ¿Que podemos hacer por usted?
+              ¿Qué podemos hacer por usted?
             </Typography>
             <Typography variant="body1" component="p" gutterBottom className={classes.mainTextCallToAction} >
               Buscamos satisfacer sus necesidades, con desarrollo de software a la medida y de alta calidad, logrando con esto ayudar a que su negocio crezca.
@@ -166,7 +165,7 @@ const LandingPage = () => {
                   </Box>
                   <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Mantenimiento</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'center'}}>
-                    Mantenimiento y soporte de aplicaciones de sus aplicaciones. 
+                    Mantenimiento y soporte de sus aplicaciones
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
@@ -175,7 +174,7 @@ const LandingPage = () => {
                   </Box>
                   <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Migración</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'center'}}>
-                    Le ayudamos a realizar la migración de su aplicación a nuevo ambiente de producción.
+                    Le ayudamos a realizar la migración de su aplicación a nuevo ambiente de producción
                   </Typography>
                 </Grid>
               </Grid>
