@@ -74,12 +74,14 @@ const LandingPage = () => {
     return (
       <Box className={classes.headerWrapper} ref={refHome}>
           <Box className={classes.headerContentWrapper}>
+            <Typography variant="h1" component="h1" gutterBottom className={classes.mainHerderTitle}>
+              Mejora tu negocio <br /> a través de la transformación digital 
+            </Typography>
             <Typography variant="h1" component="h1" gutterBottom style={{color: '#fff'}}>
-              ¿Quiénes somos?
+               
             </Typography>
             <Typography variant="body1" component="p" gutterBottom className={classes.mainHederText} >
-              Somos un empresa emergente de desarrollo de software ubicado en Limón, Costa Rica. 
-              Nuestro objetivo es colocarnos en la industria de la tecnología, y lograr ser reconocidos por proveer servicios de calidad de forma transparente y eficiente. 
+              Construimos soluciones de software personalizadas para satisfacer las necesidades de su negocio asegurando calidad y transparencia.  
             </Typography>
             <Box>
                 <button onClick={goToServices} className={classes.primaryButtonWhite}>Servicios</button>
@@ -96,20 +98,26 @@ const LandingPage = () => {
       <Box className={classes.aboutWrapper} ref={refAbout}>
           <Box className={classes.aboutContentWrapper}>
             <Typography variant="h1" component="h1"  color="primary">
-              Sobre nosotros
+              Sobre nosotros 
             </Typography>
             <Box style={{marginTop: '50px'}}>
-              <Grid container rowSpacing={3} columnSpacing={{ xs:12,  sm: 12, md: 12 }}>
+              <Grid container rowSpacing={8} columnSpacing={{ xs:12,  sm: 12, md: 12 }}>
+                <Grid item xs={12} md={12}>
+                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px'}}>Quienes somos</Typography>
+                  <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
+                    Somos una startup de desarrollo de software ubicada en Limón, Costa Rica. Nuestro objetivo es posicionarnos en la industria de la tecnología y esforzarnos por ser reconocidos por brindar servicios de calidad de manera transparente y eficiente.
+                  </Typography>
+                </Grid>
                 <Grid item xs={12} md={6}>
                   <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px'}}>Misión</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
-                    Nos apasionamos por el crecimiento local, por lo que a través de nuestros servicios tecnológicos nuestros clientes puedan expandir y facilitar sus tareas de forma eficiente, segura y confiable. 
+                    Nos apasiona el crecimiento local, para que a través de un servicio excepcional en desarrollo de software podamos ampliar y facilitar las tareas de nuestros clientes de manera eficiente, segura y confiable. 
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Typography variant="h2" component="h2" color="secondary" style={{marginBottom: '30px'}}>Visión</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
-                    Impulsar el crecimiento de la provincia de Limón mediante el uso de nuevas tecnologías, con el fin de involucrar a los negocios para mejorar y agilizar procesos.
+                    Queremos impulsar el crecimiento de la provincia de Limón a través de las nuevas tecnologías involucrando a las empresas para mejorar y agilizar procesos. 
                   </Typography>
                 </Grid>
               </Grid>
@@ -127,7 +135,7 @@ const LandingPage = () => {
               ¿Qué podemos hacer por usted?
             </Typography>
             <Typography variant="body1" component="p" gutterBottom className={classes.mainTextCallToAction} >
-              Buscamos satisfacer sus necesidades, con desarrollo de software a la medida y de alta calidad, logrando con esto ayudar a que su negocio crezca.
+              Ayudaremos a que su negocio crezca creando software personalizable y de alta calidad para una eficiente agilización de procesos. 
             </Typography>
             <Box>
                 <button onClick={goToContact} className={classes.primaryButton2White} >Contáctenos</button>
@@ -232,7 +240,7 @@ const LandingPage = () => {
                   Comienza a trabajar con nosotros
                 </Typography>
                 <Typography variant="body1" component="p"  color="secondary" >
-                  Nuestro propósito es ofrecer a nuestros clientes un servicio de alto calidad, el cual les ayude a conectar con sus clientes de la mejor forma.
+                  Nuestro principal objetivo es brindar a nuestros clientes el mejor desempeño en el servicio y generar soluciones para su transformación digital. 
                 </Typography>
               </Grid>
               <Grid xs={12} md={6}>
