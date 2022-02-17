@@ -1,18 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+
 import Box from '@mui/material/Box'
-import useStyles from './styles'
+import BuildIcon from '@mui/icons-material/Build';
+import CodeIcon from '@mui/icons-material/Code';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Typography from '@mui/material/Typography';
 import { URL_IMAGES } from '../../constants'
 import Waves from '../../components/waves/inedx'
-
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-
-import IconButton from '@mui/material/IconButton';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import CodeIcon from '@mui/icons-material/Code';
-import BuildIcon from '@mui/icons-material/Build';
-import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import useStyles from './styles'
 
 const LandingPage = () => {
   const classes = useStyles()
@@ -59,10 +58,10 @@ const LandingPage = () => {
                 </Grid>
                 <Grid md={6} display={{ xs: "none", sm: 'none',  md: "block" }}>
                   <Box className={classes.navbarLinkWrapper}>
-                    <Typography onClick={goToHome} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Home</Typography>
-                    <Typography  onClick={goToAbout} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>About</Typography>
-                    <Typography  onClick={goToServices} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Services</Typography>
-                    <Typography  onClick={goToContact} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Contact</Typography>
+                    <Typography onClick={goToHome} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Inicio</Typography>
+                    <Typography  onClick={goToAbout} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Sobre nosotros</Typography>
+                    <Typography  onClick={goToServices} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Servicios</Typography>
+                    <Typography  onClick={goToContact} variant="h3" component="span" className={navbarActive? classes.navbarItemColor: classes.navbarItemWhite}>Contacto</Typography>
                   </Box>
                 </Grid>
               </Grid>
@@ -75,16 +74,18 @@ const LandingPage = () => {
     return (
       <Box className={classes.headerWrapper} ref={refHome}>
           <Box className={classes.headerContentWrapper}>
+            <Typography variant="h1" component="h1" gutterBottom className={classes.mainHerderTitle}>
+              Mejora tu negocio <br /> a través de la transformación digital 
+            </Typography>
             <Typography variant="h1" component="h1" gutterBottom style={{color: '#fff'}}>
-              Who we are?
+               
             </Typography>
             <Typography variant="body1" component="p" gutterBottom className={classes.mainHederText} >
-              We are a software development startup located in Limón, Costa Rica. 
-              Our goal is to position ourselves in the technology industry, and strive to be recognized for providing quality services in a transparent and efficient manner.
+              Construimos soluciones de software personalizadas para satisfacer las necesidades de su negocio asegurando calidad y transparencia.  
             </Typography>
             <Box>
-                <button onClick={goToServices} className={classes.primaryButtonWhite}>Services</button>
-                <button onClick={goToContact}className={classes.secundaryButtonWhite}>Contact</button>
+                <button onClick={goToServices} className={classes.primaryButtonWhite}>Servicios</button>
+                <button onClick={goToContact}className={classes.secundaryButtonWhite}>Contacto</button>
             </Box>
           </Box>
           <Waves />
@@ -97,20 +98,26 @@ const LandingPage = () => {
       <Box className={classes.aboutWrapper} ref={refAbout}>
           <Box className={classes.aboutContentWrapper}>
             <Typography variant="h1" component="h1"  color="primary">
-                About us
+              Sobre nosotros 
             </Typography>
             <Box style={{marginTop: '50px'}}>
-              <Grid container rowSpacing={3} columnSpacing={{ xs:12,  sm: 12, md: 12 }}>
-                <Grid item xs={12} md={6}>
-                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px'}}>Mission</Typography>
+              <Grid container rowSpacing={8} columnSpacing={{ xs:12,  sm: 12, md: 12 }}>
+                <Grid item xs={12} md={12}>
+                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px'}}>Quienes somos</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
-                    We are passionate about local growth, so that through an exception service in software development we can expand and facilitate the tasks of our customers efficiently, safely and reliably.
+                    Somos una startup de desarrollo de software ubicada en Limón, Costa Rica. Nuestro objetivo es posicionarnos en la industria de la tecnología y esforzarnos por ser reconocidos por brindar servicios de calidad de manera transparente y eficiente.
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Typography variant="h2" component="h2" color="secondary" style={{marginBottom: '30px'}}>Vision</Typography>
+                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px'}}>Misión</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
-                    We want to promote the growth of Limón province through new technologies in order to involve businesses to improve and streamline processes. 
+                    Nos apasiona el crecimiento local, para que a través de un servicio excepcional en desarrollo de software podamos ampliar y facilitar las tareas de nuestros clientes de manera eficiente, segura y confiable. 
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Typography variant="h2" component="h2" color="secondary" style={{marginBottom: '30px'}}>Visión</Typography>
+                  <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify'}}>
+                    Queremos impulsar el crecimiento de la provincia de Limón a través de las nuevas tecnologías involucrando a las empresas para mejorar y agilizar procesos. 
                   </Typography>
                 </Grid>
               </Grid>
@@ -125,14 +132,14 @@ const LandingPage = () => {
       <Box className={classes.callToActionWrapper}>
           <Box className={classes.headerContentWrapper}>
             <Typography variant="h1" component="h1" gutterBottom style={{color: '#fff'}}>
-              What we can do for you?
+              ¿Qué podemos hacer por usted?
             </Typography>
             <Typography variant="body1" component="p" gutterBottom className={classes.mainTextCallToAction} >
-              We want to help your business grow by creating customizable and high quality software for our clients where we figure out the company needs.
+              Ayudaremos a que su negocio crezca creando software personalizable y de alta calidad para una eficiente agilización de procesos. 
             </Typography>
             <Box>
-                <button onClick={goToContact} className={classes.primaryButton2White} >Contact us</button>
-                <button onClick={goToServices} className={classes.secundaryButton2White}>Services</button>
+                <button onClick={goToContact} className={classes.primaryButton2White} >Contáctenos</button>
+                <button onClick={goToServices} className={classes.secundaryButton2White}>Servicios</button>
             </Box>
           </Box>
       </Box>
@@ -144,10 +151,10 @@ const LandingPage = () => {
       <Box className={classes.aboutWrapper} ref={refServices}>
           <Box className={classes.aboutContentWrapper}>
             <Typography variant="h1" component="h1"  color="primary">
-                Services
+                Servicios
             </Typography>
             <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify', marginTop: '50px'}}>
-              We offer the following services for our clients:
+              Los servicios en los que nos especializamos son los siguientes:
             </Typography>
             <Box style={{marginTop: '10px'}}>
               <Grid container rowSpacing={3} columnSpacing={{ xs:12,  sm: 12, md: 12 }}>
@@ -155,27 +162,27 @@ const LandingPage = () => {
                   <Box className={classes.boxIcons}>
                     <CodeIcon color='secondary' className={classes.icons} />
                   </Box>
-                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Software Development</Typography>
+                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Desarrollo </Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'center'}}>
-                    Customizable software development
+                    Desarrollo de software a la medida según los requerimientos del cliente
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
                   <Box className={classes.boxIcons}>
                     <BuildIcon color='secondary' className={classes.icons} />
                   </Box>
-                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Software Maintenance</Typography>
+                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Mantenimiento</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'center'}}>
-                    Maintenance and support for software aplications
+                    Mantenimiento y soporte de sus aplicaciones
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
                   <Box className={classes.boxIcons}>
                     <CompareArrowsIcon color='secondary' className={classes.icons} />
                   </Box>
-                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Software Migration</Typography>
+                  <Typography variant="h2" component="h2" color="secondary"  style={{marginBottom: '30px', textAlign: 'center'}}>Migración</Typography>
                   <Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'center'}}>
-                    We help you migrate your application to a new environmenty
+                    Le ayudamos a realizar la migración de su aplicación a nuevo ambiente de producción
                   </Typography>
                 </Grid>
               </Grid>
@@ -190,9 +197,9 @@ const LandingPage = () => {
       <Box className={classes.techWrapper}>
           <Box className={classes.techContentWrapper}>
             <Typography variant="h1" component="h1"  color="primary">
-              Technologies
+              Tecnologías
             </Typography><Typography variant="body1" component="p" style={{color: '#98A4B0', textAlign: 'justify', marginTop: '50px'}}>
-              Our team have experience with the following technologies:
+              Nuestro equipo tiene experiencia utilizando las siguientes tecnologías:
             </Typography>
             <Box style={{marginTop: '50px'}}>
               <Grid container rowSpacing={3} columnSpacing={{ xs:12,  sm: 12, md: 12 }}>
@@ -230,15 +237,15 @@ const LandingPage = () => {
             <Grid container >
               <Grid xs={12} md={6}>
                 <Typography variant="h1" component="h1" color="secondary" gutterBottom>
-                  Start working with us
+                  Comienza a trabajar con nosotros
                 </Typography>
                 <Typography variant="body1" component="p"  color="secondary" >
-                  Our main goal is to give our clients the best performance of the service so they can approach to their customers by the best way.
+                  Nuestro principal objetivo es brindar a nuestros clientes el mejor desempeño en el servicio y generar soluciones para su transformación digital. 
                 </Typography>
               </Grid>
               <Grid xs={12} md={6}>
                 <Box className={classes.workButtonsWrapper}>
-                  <a href={"mailto:hello@sealabs.cr?subject=Hi, Let's talk!"}>
+                  <a href={"mailto:hello@sealabs.cr?subject=Hola, !Hablemos!"}>
                     <button  className={classes.primaryButtonBlue} >Email</button>
                   </a>
                   <a href={"https://www.linkedin.com/company/sealabscr"}  target="_blank">
@@ -264,24 +271,24 @@ const LandingPage = () => {
               </Grid>
               <Grid xs={12} md={3} style={{marginBottom: '20px'}}>
                 <Typography variant="h2" component="h2" style={{color: '#fff', marginBottom: '20px'}} >
-                  Navigation
+                  Navegación
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.footerLinks} style={{marginBottom: '8px'}} onClick={goToHome}>
-                  Home
+                  Inicio
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.footerLinks} style={{marginBottom: '8px'}} onClick={goToAbout}>
-                  About
+                  Sobre Nosotros
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.footerLinks} style={{marginBottom: '8px'}} onClick={goToServices} >
-                  Services
+                  Servicios
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.footerLinks} style={{marginBottom: '8px'}} onClick={goToContact} >
-                  Contact
+                  Contacto
                 </Typography>
               </Grid>
               <Grid xs={12} md={3} style={{marginBottom: '20px'}}>
                 <Typography variant="h2" component="h2" style={{color: '#fff', marginBottom: '20px'}} >
-                  Contact
+                  Contacto
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.footerLinks} style={{marginBottom: '8px'}}>
                   Puerto Limón , Costa Rica
@@ -290,7 +297,7 @@ const LandingPage = () => {
                   <a href={"tel:+50687202621"} style={{textDecoration: 'none', color: '#fff'}}>+506 87202621</a>
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.footerLinks} style={{marginBottom: '8px'}} >
-                  <a href={"mailto:hello@sealabs.cr?subject=Hi, Let's talk!"} style={{textDecoration: 'none', color: '#fff'}}>hello@sealabs.cr</a>
+                  <a href={"mailto:hello@sealabs.cr?subject=Hola, !Hablemos!"} style={{textDecoration: 'none', color: '#fff'}}>hello@sealabs.cr</a>
                 </Typography>
                 <Box className={classes.iconButtonWrapper}>
                     <IconButton size="large">
@@ -316,7 +323,7 @@ const LandingPage = () => {
       <Box className={classes.copyrightWrapper}>
           <Box className={classes.copyrightContentWrapper}>
             <Typography variant="body1" component="p" color="secondary">
-              All rights reserved Sealabs Technology
+              Todos los derechos reservados Sealabs Technologies
             </Typography>
           </Box>
       </Box>

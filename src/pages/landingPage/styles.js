@@ -60,18 +60,21 @@ const useStyles = makeStyles( theme => ({
         },
     },
     logoWrapper:{
-        width: '300px',
-        [themeBreakpoints.down('md')]: {
-            display: 'flex',
-            width: '100%',
-            justifyContent: 'center',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+          [themeBreakpoints.up('md')]: {
+              width: '250px',
         },
     },
     logo:{
-        width: '100%',
-        [themeBreakpoints.down('md')]: {
-            width: '50%',
+        width: '50%',
+        [themeBreakpoints.up('sm')]: {
+            width: '30%',
         },
+        [themeBreakpoints.up('md')]: {
+          width: '100%',
+      },
     },
     headerWrapper:{
         paddingTop: '100px',
@@ -94,6 +97,9 @@ const useStyles = makeStyles( theme => ({
         [themeBreakpoints.down('md')]: {
             padding: '40px 25px 40px  25px',
         },
+    },
+    mainHerderTitle:{
+        color: '#fff',
     },
     mainHederText:{
         color: '#fff',
