@@ -1,6 +1,6 @@
 {
-  "name": "sealabs.cr",
-  "homepage": "https://sealabs.cr",
+  "name": "es.sealabs.cr",
+  "homepage": "https://es.sealabs.cr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
